@@ -9,6 +9,7 @@ http://weekend-fabrication.yasulab.com/
 
 ## どこまで出来てるか
 USBで接続してマウスポインタを移動クリック出来るところまで
+
 * Android側:
 ** タッチのイベントを拾ってUSB経由やWiFi経由でPCにイベントを送るまで
 * Mac側
