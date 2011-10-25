@@ -10,11 +10,11 @@ http://weekend-fabrication.yasulab.com/
 ## どこまで出来てるか
 USBで接続してマウスポインタを移動クリック出来るところまで
 
-* Android側:
-** タッチのイベントを拾ってUSB経由やWiFi経由でPCにイベントを送るまで
-* Mac側
-** Androidアプリ側から送られてきたタッチの動作を取得しマウスポインタを移動・クリックさせる
-** MacRubyで開発しているので実行にはMacRubyが必要
+### Android側:
+* タッチのイベントを拾ってUSB経由やWiFi経由でPCにイベントを送るまで
+### Mac側
+* Androidアプリ側から送られてきたタッチの動作を取得しマウスポインタを移動・クリックさせる
+* MacRubyで開発しているので実行にはMacRubyが必要
 
 ## 使い方
 AndroidとMacを接続する必要がある
