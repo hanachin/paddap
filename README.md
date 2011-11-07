@@ -1,3 +1,34 @@
+# Demo movie
+http://www.youtube.com/watch?v=2mYE6v7C0Us
+http://www.youtube.com/watch?v=OBkrbA452JE
+
+# Paddap
+Paddap is an Android app for remote control of your Mac
+You can control Mac from Android.
+
+This app is made in weekend fabricatoin class.
+http://weekend-fabrication.yasulab.com/
+
+## Usage
+Connect android to Mac.
+
+### Connecting via LAN
+Edit the paddap.rb to set the host variable to Android's IP address.
+
+### Connecting via USB
+Connect your Android to Mac and open Terminal.app and run this command.
+`$ adb forward tcp:6666 tcp:6666`
+
+### Android operation
+Run Paddap.
+
+### Mac operation
+Paddap require MacRuby.
+http://www.macruby.org/downloads.html
+
+Execute paddap.rb
+`$ macruby paddap.rb`
+
 # Paddap
 AndroidをMacのトラックパッド代わりに使うアプリ
 Androidアプリがサーバーとして動作しタッチパネルのイベントをMac(クライアント)に送信する
