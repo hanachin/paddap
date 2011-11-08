@@ -1,20 +1,19 @@
-# Demo movie
-Paddap demo1
-http://www.youtube.com/watch?v=2mYE6v7C0Us
-
-Paddap demo2
-http://www.youtube.com/watch?v=OBkrbA452JE
-
 # Paddap
-Paddap is an Android app for remote control of your Mac
+Paddap is an Android app for remote control of your Mac.
+
 You can control Mac from Android.
 
 This app is made in weekend fabricatoin class.
 
 http://weekend-fabrication.yasulab.com/
 
+## Demo movie
+Paddap demo
+
+http://www.youtube.com/watch?v=OBkrbA452JE
+
 ## Usage
-Connect android to Mac.
+Connect android to Mac via USB or LAN.
 
 ### Connecting via LAN
 Edit the paddap.rb to set the host variable to Android's IP address.
@@ -28,7 +27,7 @@ Connect your Android to Mac and open Terminal.app and run this command.
 Run Paddap.
 
 ### Mac operation
-Paddap require MacRuby.
+Paddap requires MacRuby.
 
 http://www.macruby.org/downloads.html
 
@@ -36,44 +35,55 @@ Execute paddap.rb
 `$ macruby paddap.rb`
 
 # Paddap
-AndroidをMacのトラックパッド代わりに使うアプリ
-Androidアプリがサーバーとして動作しタッチパネルのイベントをMac(クライアント)に送信する
-Mac(クライアント)はそれを受信しマウスを動かす等の動作をする
+AndroidをMacのトラックパッド代わりに使うアプリ。
 
-週末ものづくり体験講座
+Androidアプリがサーバーとして動作しタッチパネルのイベントをMac(クライアント)に送信する。
+
+Mac(クライアント)はイベントを受信しマウスを動かす等の動作をする。
+
+週末ものづくり体験講座の授業の1週目で開発したもの。
+
 http://weekend-fabrication.yasulab.com/
-の授業の1週目で開発したもの
 
-## どこまで出来てるか
-USBで接続してマウスポインタを移動クリック出来るところまで
 
-### Android側:
-* タッチのイベントを拾ってUSB経由やWiFi経由でPCにイベントを送るまで
+## デモ動画
+Paddap demo
+
+http://www.youtube.com/watch?v=OBkrbA452JE
+
+## 実装済み
+### Android側
+* タッチのイベントを拾ってUSB経由・ネットワーク経由でPCにイベントを送るまで。
 
 ### Mac側
-* Androidアプリ側から送られてきたタッチの動作を取得しマウスポインタを移動・クリックさせる
-* MacRubyで開発しているので実行にはMacRubyが必要
+* Androidアプリ側から送られてきたタッチの動作を取得しマウスポインタを移動・クリックさせる。
+* MacRubyで開発しているので実行にはMacRubyが必要。
+
+## 未実装
+* スクロール
+* 右クリック
 
 ## 使い方
-AndroidとMacを接続する必要がある
+AndroidとMacをUSBまたはLAN経由で接続する必要がある。
 
 ### ネットワーク経由で接続する場合
-paddap.rbのhostをAndroidに設定されているのIPアドレスで書き換える
+paddap.rbのhostをAndroidに設定されているのIPアドレスで書き換える。
 
 ### USB経由で接続する場合
-Android端末をUSBでつなぎ
+Android端末をUSBでつなぎ次のコマンドをを実行し、Androidの通信をlocalhostのポート6666番で待ち受けるようにする
+
 `$ adb forward tcp:6666 tcp:6666`
-を実行しAndroidの通信をlocalhostのポート6666番で待ち受けるようにする
-paddap.rbのhostをlocalhostに設定する
+
+paddap.rbのhostをlocalhostに設定する。
 
 ### Android側
-Paddapを立ち上げる
+Paddapを立ち上げる。
 
 ### Mac側
-MacRubyをインストールする
-http://www.macruby.org/downloads.html
-Androidでアプリを立ち上げてからpaddap.rbを実行する
-`$ macruby paddap.rb`
+MacRubyをインストールする。
 
-### 実装されている操作
-タッチパネルに触れたまま移動でマウスポインタの移動、タップでクリック
+http://www.macruby.org/downloads.html
+
+Androidでアプリを立ち上げてからpaddap.rbを実行する。
+
+`$ macruby paddap.rb`
